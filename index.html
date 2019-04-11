@@ -20,12 +20,13 @@
 
   <link href="./main.82cfd66e.css" rel="stylesheet">
   <style>
-  .logo {
-    font-family: "Pacifico";
-  }
-  p {
-    color: rgb(36, 36, 36);
-  }
+    .logo {
+      font-family: "Pacifico";
+    }
+
+    p {
+      color: rgb(36, 36, 36);
+    }
   </style>
 </head>
 
@@ -49,22 +50,22 @@
           <a class="site-brand" href="./index.html" title="">
             <!-- <img class="img-responsive site-logo" alt="" style="height:50px"
               src="https://globaltechnosol.com/wp-content/uploads/2017/03/411a4835d38ff899e55ce2802b08329c.jpg"> -->
-              <h3 class="logo">JJ</h3>
+            <h3 class="logo">JJ</h3>
             Josh Jenkin
           </a>
         </div>
         <ul class="nav">
-            <p class="text grey-text text-lighten-4 z-depth-5">A musician at heart, my love for electronic
-                music and
-                electronics in general
-                has brought me to
-                the precipice of Software Development.<br><br>
-                Information seeking, dedicated, eager to learn, just a few things that define Josh Jenkin.
-                I am here to improve; myself, your business, your products. With a firm grasp on Front End
-                Development, I would be an asset to any company. With my extensive customer service
-                knowledge, my skills easily translate to create the best UI imaginable.<br><br>
-                Click the links of my Portfolio to find out more about the work I've done and more about me!
-              </p>
+          <p class="text grey-text text-lighten-4 z-depth-5">A musician at heart, my love for electronic
+            music and
+            electronics in general
+            has brought me to
+            the precipice of Software Development.<br><br>
+            Information seeking, dedicated, eager to learn, just a few things that define Josh Jenkin.
+            I am here to improve; myself, your business, your products. With a firm grasp on Front End
+            Development, I would be an asset to any company. With my extensive customer service
+            knowledge, my skills easily translate to create the best UI imaginable.<br><br>
+            Click the links of my Portfolio to find out more about the work I've done and more about me!
+          </p>
           <li><a class="grey-text text-lighten-3 links"
               href="https://www.linkedin.com/in/josh-jenkin-7065a993/">LinkedIn</a></li>
           <li><a class="grey-text text-lighten-3 links" href="https://github.com/jjenks713">Github</a></li>
@@ -73,7 +74,7 @@
 
         </ul>
 
-        <nav class="nav-footer">
+        <nav id="hide-nav" class="nav-footer">
           <p class="nav-footer-social-buttons">
             <a class="fa-icon" href="https://www.linkedin.com/in/josh-jenkin-7065a993/" target="_blank" title="">
               <i class="fa fa-linkedin"></i>
@@ -134,7 +135,7 @@
               <div class="project-text-inner">
                 <h3>Google Book Search</h3>
                 <p>React app, using Google Books API and MongoDB to search,<br>
-                save and delete books!</p>
+                  save and delete books!</p>
               </div>
             </div>
           </a>
@@ -171,7 +172,7 @@
               <div class="project-text-inner">
                 <h3>Friend Finder</h3>
                 <p>Friend Finder implements friend matching based on the user's<br>
-                   responses to a ten question survey</p>
+                  responses to a ten question survey</p>
               </div>
             </div>
           </a>
@@ -242,11 +243,19 @@
       </div>
     </div>
 
-
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         masonryBuild();
       });
+
+        var windowWidth = $(window).width();
+        console.log("something", windowWidth);
+        if (windowWidth < 768) {
+          $("#hide-nav").hide();
+        };
+
     </script>
 
   </main>
